@@ -39,6 +39,22 @@
 		D944CF0326E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */; };
 		D944CF0526E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */; };
 		D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */; };
+		D944CF0B26E418B0002D3CD5 /* APIConfig-Dev.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0A26E418B0002D3CD5 /* APIConfig-Dev.swift */; };
+		D944CF0E26E418F9002D3CD5 /* APIConfig-Prod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0C26E418BF002D3CD5 /* APIConfig-Prod.swift */; };
+		D944CF1226E41921002D3CD5 /* GameListNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1126E41921002D3CD5 /* GameListNetworkRouter.swift */; };
+		D944CF1526E4193D002D3CD5 /* GameListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1426E4193D002D3CD5 /* GameListResponse.swift */; };
+		D944CF1626E41B76002D3CD5 /* GameListNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1126E41921002D3CD5 /* GameListNetworkRouter.swift */; };
+		D944CF1726E41B79002D3CD5 /* GameListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1426E4193D002D3CD5 /* GameListResponse.swift */; };
+		D944CF1926E41B85002D3CD5 /* GameListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1826E41B85002D3CD5 /* GameListRequest.swift */; };
+		D944CF1A26E41B85002D3CD5 /* GameListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1826E41B85002D3CD5 /* GameListRequest.swift */; };
+		D944CF1C26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1B26E41BE5002D3CD5 /* HTTPHelpers.swift */; };
+		D944CF1D26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1B26E41BE5002D3CD5 /* HTTPHelpers.swift */; };
+		D944CF1F26E41D89002D3CD5 /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */; };
+		D944CF2026E41D89002D3CD5 /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */; };
+		D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2226E422BB002D3CD5 /* NetworkManager.swift */; };
+		D944CF2426E422BB002D3CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2226E422BB002D3CD5 /* NetworkManager.swift */; };
+		D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */; };
+		D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +100,15 @@
 		D944CEFE26E41122002D3CD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationRouter.swift; sourceTree = "<group>"; };
+		D944CF0A26E418B0002D3CD5 /* APIConfig-Dev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIConfig-Dev.swift"; sourceTree = "<group>"; };
+		D944CF0C26E418BF002D3CD5 /* APIConfig-Prod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIConfig-Prod.swift"; sourceTree = "<group>"; };
+		D944CF1126E41921002D3CD5 /* GameListNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListNetworkRouter.swift; sourceTree = "<group>"; };
+		D944CF1426E4193D002D3CD5 /* GameListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListResponse.swift; sourceTree = "<group>"; };
+		D944CF1826E41B85002D3CD5 /* GameListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRequest.swift; sourceTree = "<group>"; };
+		D944CF1B26E41BE5002D3CD5 /* HTTPHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHelpers.swift; sourceTree = "<group>"; };
+		D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
+		D944CF2226E422BB002D3CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoutering.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +194,7 @@
 		D944CEA326E401A3002D3CD5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D944CF0926E4145E002D3CD5 /* Utilities */,
 				D944CEFA26E410E5002D3CD5 /* Constants */,
 				D944CEF226E40E1C002D3CD5 /* Extensions */,
 				D944CEA626E401E1002D3CD5 /* Resources */,
@@ -193,6 +219,8 @@
 				D944CEAC26E402BA002D3CD5 /* Info-Dev.plist */,
 				D944CEC426E405CD002D3CD5 /* Info-Prod.plist */,
 				D944CE7926E3FD63002D3CD5 /* LeanScaleTask.xcdatamodeld */,
+				D944CF0A26E418B0002D3CD5 /* APIConfig-Dev.swift */,
+				D944CF0C26E418BF002D3CD5 /* APIConfig-Prod.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -270,6 +298,7 @@
 		D944CEEB26E40C98002D3CD5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D944CF0F26E41908002D3CD5 /* Data */,
 				D944CEEC26E40C9F002D3CD5 /* UI */,
 			);
 			path = Entity;
@@ -296,6 +325,7 @@
 			children = (
 				D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */,
 				D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */,
+				D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +345,50 @@
 				D944CEFE26E41122002D3CD5 /* ViewController.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D944CF0926E4145E002D3CD5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF2126E4229E002D3CD5 /* Network */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D944CF0F26E41908002D3CD5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF1026E4190D002D3CD5 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D944CF1026E4190D002D3CD5 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF1326E4192C002D3CD5 /* Request */,
+				D944CF1126E41921002D3CD5 /* GameListNetworkRouter.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		D944CF1326E4192C002D3CD5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF1426E4193D002D3CD5 /* GameListResponse.swift */,
+				D944CF1826E41B85002D3CD5 /* GameListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D944CF2126E4229E002D3CD5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF1B26E41BE5002D3CD5 /* HTTPHelpers.swift */,
+				D944CF2226E422BB002D3CD5 /* NetworkManager.swift */,
+				D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,17 +551,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */,
 				D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
 				D944CEF726E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
+				D944CF1C26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */,
 				D944CF0526E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CEE926E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D944CF1F26E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEFF26E41122002D3CD5 /* ViewController.swift in Sources */,
+				D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
+				D944CF1226E41921002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
+				D944CF1926E41B85002D3CD5 /* GameListRequest.swift in Sources */,
+				D944CF0B26E418B0002D3CD5 /* APIConfig-Dev.swift in Sources */,
 				D944CEFC26E410F6002D3CD5 /* Storyboard.swift in Sources */,
 				D944CE7B26E3FD63002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
 				D944CE7126E3FD63002D3CD5 /* AppDelegate.swift in Sources */,
 				D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEDF26E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
+				D944CF1526E4193D002D3CD5 /* GameListResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,10 +593,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944CF2426E422BB002D3CD5 /* NetworkManager.swift in Sources */,
 				D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
+				D944CF0E26E418F9002D3CD5 /* APIConfig-Prod.swift in Sources */,
+				D944CF1D26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */,
 				D944CEF826E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
 				D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
+				D944CF2026E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
+				D944CF1626E41B76002D3CD5 /* GameListNetworkRouter.swift in Sources */,
+				D944CF1726E41B79002D3CD5 /* GameListResponse.swift in Sources */,
+				D944CF1A26E41B85002D3CD5 /* GameListRequest.swift in Sources */,
 				D944CF0026E41122002D3CD5 /* ViewController.swift in Sources */,
 				D944CEEF26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
 				D944CEFD26E410F6002D3CD5 /* Storyboard.swift in Sources */,
