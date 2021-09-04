@@ -27,6 +27,8 @@
 		D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEE826E40952002D3CD5 /* GameListViewController.swift */; };
 		D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */; };
 		D944CEEF26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */; };
+		D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */; };
+		D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		D944CEDE26E408F9002D3CD5 /* GameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 		D944CEE826E40952002D3CD5 /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCellViewModel.swift; sourceTree = "<group>"; };
+		D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +127,7 @@
 		D944CE6F26E3FD63002D3CD5 /* LeanScaleTask */ = {
 			isa = PBXGroup;
 			children = (
-				D944CED626E40808002D3CD5 /* GameList */,
+				D944CEF126E40E0E002D3CD5 /* Features */,
 				D944CEA326E401A3002D3CD5 /* SupportingFiles */,
 			);
 			path = LeanScaleTask;
@@ -151,6 +154,7 @@
 		D944CEA326E401A3002D3CD5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D944CEF226E40E1C002D3CD5 /* Extensions */,
 				D944CEA626E401E1002D3CD5 /* Resources */,
 				D944CEA526E401BC002D3CD5 /* Configs */,
 				D944CEA426E401B4002D3CD5 /* App */,
@@ -259,6 +263,22 @@
 				D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		D944CEF126E40E0E002D3CD5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D944CED626E40808002D3CD5 /* GameList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D944CEF226E40E1C002D3CD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
 				D944CEE926E40952002D3CD5 /* GameListViewController.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
 				D944CE7B26E3FD63002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
@@ -449,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
 				D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */,
 				D944CEEF26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
 				D944CEB926E405AB002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
