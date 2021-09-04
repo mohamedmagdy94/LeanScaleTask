@@ -8,10 +8,10 @@
 import UIKit
 
 class GameListViewController: UIViewController {
-
+    
     @IBOutlet weak var gamesSearchBar: UISearchBar!
     @IBOutlet private weak var gamesTableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -36,6 +36,15 @@ extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.REUSE_IDENTIFIER, for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+        UIView.animate(withDuration: 0.4) {
+            cell.alpha = 1
+            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
