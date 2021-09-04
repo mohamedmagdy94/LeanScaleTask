@@ -9,6 +9,7 @@ import Foundation
 import UIKit.UIColor
 
 struct GameListCellViewModel{
+    var imageURL: String
     var title: String
     var metacritic: String
     var categories: String

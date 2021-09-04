@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -20,19 +20,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FPN-H4-d9P" userLabel="rootView">
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-rj-Rui" userLabel="titleLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-rj-Rui" userLabel="viewTitle">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="zlV-xw-Bfs">
+                                    <searchBar contentMode="redraw" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="zlV-xw-Bfs" userLabel="gamesSearchBar">
                                         <rect key="frame" x="0.0" y="54.5" width="414" height="51"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aep-18-in4">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aep-18-in4" userLabel="gamesTableView">
                                         <rect key="frame" x="0.0" y="121.5" width="414" height="648.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="6hL-WL-Mty"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="icD-jc-VXH"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -46,6 +50,10 @@
                             <constraint firstItem="FPN-H4-d9P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Omv-X2-WQQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gamesSearchBar" destination="zlV-xw-Bfs" id="J8N-NA-kQF"/>
+                        <outlet property="gamesTableView" destination="aep-18-in4" id="fKv-TU-RLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
