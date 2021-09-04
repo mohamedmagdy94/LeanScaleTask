@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GameListNetworkRouter {
+enum GameListNetworkRouter: NetworkRoutering {
     case getGames(request: GameListRequest)
     
     private var method: HTTPHelper.HTTPMethod {
@@ -42,14 +42,14 @@ enum GameListNetworkRouter {
         
         switch encoding {
         case .body:
-            guard let constructedURL = URL(string: urlString) else{  throw HTTPHelper.ErrorType.parseUrlFail }
+            guard let constructedURL = URL(string: urlString) else{  throw HTTPHelper.NetworkError.parseUrlFail }
             url = constructedURL
         case .query:
-            guard let constructedURL = buildURLFromQueryItems() else{  throw HTTPHelper.ErrorType.parseUrlFail }
+            guard let constructedURL = buildURLFromQueryItems() else{  throw HTTPHelper.NetworkError.parseUrlFail }
             url = constructedURL
             
         }
-        guard let url = url else{  throw HTTPHelper.ErrorType.parseUrlFail }
+        guard let url = url else{  throw HTTPHelper.NetworkError.parseUrlFail }
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
         request.httpMethod = method.value
         headers.forEach{ request.addValue("\($0.value)", forHTTPHeaderField: "\($0.key)") }

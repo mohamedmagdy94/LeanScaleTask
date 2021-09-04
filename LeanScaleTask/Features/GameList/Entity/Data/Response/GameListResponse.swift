@@ -9,12 +9,12 @@ import Foundation
 struct GameListResponse : Codable {
     let count: Int?
     let next: String?
-    let results: [Result]?
+    let results: [Game]?
     let userPlatforms: Bool?
 }
 
 // MARK: - Result
-struct Result : Codable {
+struct Game : Codable {
     let slug, name: String?
     let playtime: Int?
     let platforms: [Platform]?

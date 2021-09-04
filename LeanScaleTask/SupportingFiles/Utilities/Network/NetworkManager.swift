@@ -28,7 +28,7 @@ class NetworkManager {
                     }
                     
                     guard let statusCode = urlResponse?.getStatusCode(), (200...299).contains(statusCode) else {
-                        let errorType: HTTPHelper.ErrorType
+                        let errorType: HTTPHelper.NetworkError
                         
                         switch urlResponse?.getStatusCode() {
                         case 404:
@@ -46,7 +46,7 @@ class NetworkManager {
                     }
                     
                     guard let data = data else {
-                        completion(HTTPHelper.Result<T>.failure(error: HTTPHelper.ErrorType.defaultError))
+                        completion(HTTPHelper.Result<T>.failure(error: HTTPHelper.NetworkError.defaultError))
                         return
                     }
                     

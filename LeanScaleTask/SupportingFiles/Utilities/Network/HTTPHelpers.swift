@@ -30,7 +30,7 @@ enum HTTPHelper{
         case query
     }
     
-    enum ErrorType: LocalizedError {
+    enum NetworkError: Error {
         case parseUrlFail
         case notFound
         case validationError

@@ -55,6 +55,16 @@
 		D944CF2426E422BB002D3CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2226E422BB002D3CD5 /* NetworkManager.swift */; };
 		D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */; };
 		D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */; };
+		D944CF2A26E423AA002D3CD5 /* GameRemoteReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2926E423AA002D3CD5 /* GameRemoteReprository.swift */; };
+		D944CF2B26E423AA002D3CD5 /* GameRemoteReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2926E423AA002D3CD5 /* GameRemoteReprository.swift */; };
+		D944CF2E26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2D26E42707002D3CD5 /* GameListLocalReprository.swift */; };
+		D944CF2F26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF2D26E42707002D3CD5 /* GameListLocalReprository.swift */; };
+		D944CF3126E4284F002D3CD5 /* LocalStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3026E4284F002D3CD5 /* LocalStorageKey.swift */; };
+		D944CF3226E4284F002D3CD5 /* LocalStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3026E4284F002D3CD5 /* LocalStorageKey.swift */; };
+		D944CF3426E42911002D3CD5 /* GameListReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3326E42911002D3CD5 /* GameListReprository.swift */; };
+		D944CF3526E42911002D3CD5 /* GameListReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3326E42911002D3CD5 /* GameListReprository.swift */; };
+		D944CF3726E42AAD002D3CD5 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3626E42AAD002D3CD5 /* Page.swift */; };
+		D944CF3826E42AAD002D3CD5 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3626E42AAD002D3CD5 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +119,11 @@
 		D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		D944CF2226E422BB002D3CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoutering.swift; sourceTree = "<group>"; };
+		D944CF2926E423AA002D3CD5 /* GameRemoteReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRemoteReprository.swift; sourceTree = "<group>"; };
+		D944CF2D26E42707002D3CD5 /* GameListLocalReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListLocalReprository.swift; sourceTree = "<group>"; };
+		D944CF3026E4284F002D3CD5 /* LocalStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKey.swift; sourceTree = "<group>"; };
+		D944CF3326E42911002D3CD5 /* GameListReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListReprository.swift; sourceTree = "<group>"; };
+		D944CF3626E42AAD002D3CD5 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +358,7 @@
 			children = (
 				D944CEFB26E410F6002D3CD5 /* Storyboard.swift */,
 				D944CEFE26E41122002D3CD5 /* ViewController.swift */,
+				D944CF3026E4284F002D3CD5 /* LocalStorageKey.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -358,24 +374,18 @@
 		D944CF0F26E41908002D3CD5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D944CF1026E4190D002D3CD5 /* Remote */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D944CF1026E4190D002D3CD5 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
+				D944CF2C26E426F3002D3CD5 /* Reprository */,
+				D944CF2826E4238D002D3CD5 /* Response */,
 				D944CF1326E4192C002D3CD5 /* Request */,
 				D944CF1126E41921002D3CD5 /* GameListNetworkRouter.swift */,
+				D944CF3626E42AAD002D3CD5 /* Page.swift */,
 			);
-			path = Remote;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D944CF1326E4192C002D3CD5 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				D944CF1426E4193D002D3CD5 /* GameListResponse.swift */,
 				D944CF1826E41B85002D3CD5 /* GameListRequest.swift */,
 			);
 			path = Request;
@@ -389,6 +399,24 @@
 				D944CF2526E42316002D3CD5 /* NetworkRoutering.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D944CF2826E4238D002D3CD5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF1426E4193D002D3CD5 /* GameListResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		D944CF2C26E426F3002D3CD5 /* Reprository */ = {
+			isa = PBXGroup;
+			children = (
+				D944CF2926E423AA002D3CD5 /* GameRemoteReprository.swift */,
+				D944CF2D26E42707002D3CD5 /* GameListLocalReprository.swift */,
+				D944CF3326E42911002D3CD5 /* GameListReprository.swift */,
+			);
+			path = Reprository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,13 +580,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */,
+				D944CF2E26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */,
+				D944CF3726E42AAD002D3CD5 /* Page.swift in Sources */,
 				D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
+				D944CF2A26E423AA002D3CD5 /* GameRemoteReprository.swift in Sources */,
 				D944CEF726E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
+				D944CF3126E4284F002D3CD5 /* LocalStorageKey.swift in Sources */,
 				D944CF1C26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */,
 				D944CF0526E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CEE926E40952002D3CD5 /* GameListViewController.swift in Sources */,
 				D944CF1F26E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEFF26E41122002D3CD5 /* ViewController.swift in Sources */,
+				D944CF3426E42911002D3CD5 /* GameListReprository.swift in Sources */,
 				D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
 				D944CF1226E41921002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
@@ -594,13 +627,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CF2426E422BB002D3CD5 /* NetworkManager.swift in Sources */,
+				D944CF2F26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */,
+				D944CF3826E42AAD002D3CD5 /* Page.swift in Sources */,
 				D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
+				D944CF2B26E423AA002D3CD5 /* GameRemoteReprository.swift in Sources */,
 				D944CF0E26E418F9002D3CD5 /* APIConfig-Prod.swift in Sources */,
+				D944CF3226E4284F002D3CD5 /* LocalStorageKey.swift in Sources */,
 				D944CF1D26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */,
 				D944CEF826E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
 				D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CF2026E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D944CF3526E42911002D3CD5 /* GameListReprository.swift in Sources */,
 				D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
 				D944CF1626E41B76002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D944CF1726E41B79002D3CD5 /* GameListResponse.swift in Sources */,
