@@ -29,6 +29,16 @@
 		D944CEEF26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */; };
 		D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */; };
 		D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */; };
+		D944CEF726E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF626E410A5002D3CD5 /* GameListNavigationRouter.swift */; };
+		D944CEF826E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEF626E410A5002D3CD5 /* GameListNavigationRouter.swift */; };
+		D944CEFC26E410F6002D3CD5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEFB26E410F6002D3CD5 /* Storyboard.swift */; };
+		D944CEFD26E410F6002D3CD5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEFB26E410F6002D3CD5 /* Storyboard.swift */; };
+		D944CEFF26E41122002D3CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEFE26E41122002D3CD5 /* ViewController.swift */; };
+		D944CF0026E41122002D3CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CEFE26E41122002D3CD5 /* ViewController.swift */; };
+		D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */; };
+		D944CF0326E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */; };
+		D944CF0526E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */; };
+		D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +79,11 @@
 		D944CEE826E40952002D3CD5 /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		D944CEED26E40CAD002D3CD5 /* GameListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCellViewModel.swift; sourceTree = "<group>"; };
 		D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		D944CEF626E410A5002D3CD5 /* GameListNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListNavigationRouter.swift; sourceTree = "<group>"; };
+		D944CEFB26E410F6002D3CD5 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		D944CEFE26E41122002D3CD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +169,7 @@
 		D944CEA326E401A3002D3CD5 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D944CEFA26E410E5002D3CD5 /* Constants */,
 				D944CEF226E40E1C002D3CD5 /* Extensions */,
 				D944CEA626E401E1002D3CD5 /* Resources */,
 				D944CEA526E401BC002D3CD5 /* Configs */,
@@ -166,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D944CE7026E3FD63002D3CD5 /* AppDelegate.swift */,
+				D944CF0426E411EF002D3CD5 /* AppNavigationRouter.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -192,6 +209,7 @@
 		D944CED626E40808002D3CD5 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
+				D944CEF926E410A9002D3CD5 /* Router */,
 				D944CEEB26E40C98002D3CD5 /* Entity */,
 				D944CED726E40821002D3CD5 /* View */,
 			);
@@ -277,8 +295,26 @@
 			isa = PBXGroup;
 			children = (
 				D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */,
+				D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D944CEF926E410A9002D3CD5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D944CEF626E410A5002D3CD5 /* GameListNavigationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D944CEFA26E410E5002D3CD5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D944CEFB26E410F6002D3CD5 /* Storyboard.swift */,
+				D944CEFE26E41122002D3CD5 /* ViewController.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,10 +478,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CEF426E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
+				D944CEF726E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
+				D944CF0526E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CEE926E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D944CEFF26E41122002D3CD5 /* ViewController.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
+				D944CEFC26E410F6002D3CD5 /* Storyboard.swift in Sources */,
 				D944CE7B26E3FD63002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
 				D944CE7126E3FD63002D3CD5 /* AppDelegate.swift in Sources */,
+				D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEDF26E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,10 +512,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CEF526E40E2F002D3CD5 /* UIImageView+Extension.swift in Sources */,
+				D944CEF826E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
+				D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D944CF0026E41122002D3CD5 /* ViewController.swift in Sources */,
 				D944CEEF26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
+				D944CEFD26E410F6002D3CD5 /* Storyboard.swift in Sources */,
 				D944CEB926E405AB002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
 				D944CEBA26E405AB002D3CD5 /* AppDelegate.swift in Sources */,
+				D944CF0326E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEE026E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

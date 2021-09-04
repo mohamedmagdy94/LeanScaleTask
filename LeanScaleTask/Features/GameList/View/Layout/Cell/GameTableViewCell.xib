@@ -19,25 +19,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8sx-SL-mkl" userLabel="rootView">
-                        <rect key="frame" x="8" y="8" width="405" height="128"/>
+                        <rect key="frame" x="0.0" y="8" width="421" height="128"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pfk-K0-qVY" userLabel="gameThumbImage">
-                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="162" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="164" id="GkA-Tp-2M7"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yI7-Hk-0Kc">
-                                <rect key="frame" x="171.5" y="0.0" width="233.5" height="128"/>
+                                <rect key="frame" x="178" y="0.0" width="243" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="The Witcher 3: Wild Hunter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-3S-ZH9" userLabel="gameNameLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="78.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="243" height="78.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lz-yy-FY8">
-                                        <rect key="frame" x="0.0" y="86.5" width="233.5" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="86.5" width="243" height="19.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="metacritic:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-uW-4iu" userLabel="metacriticTitleLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="73.5" height="19.5"/>
@@ -46,7 +46,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGe-rl-0s4" userLabel="metacriticValueLabel">
-                                                <rect key="frame" x="73.5" y="0.0" width="160" height="19.5"/>
+                                                <rect key="frame" x="73.5" y="0.0" width="169.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" systemColor="systemPinkColor"/>
                                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action, Drama, Comdey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-Qt-n9x" userLabel="categoriesLabel">
-                                        <rect key="frame" x="0.0" y="114" width="233.5" height="14"/>
+                                        <rect key="frame" x="0.0" y="114" width="243" height="14"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -69,8 +69,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="8sx-SL-mkl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8J0-8d-QtS"/>
-                    <constraint firstItem="8sx-SL-mkl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fp9-2C-7Ld"/>
-                    <constraint firstAttribute="trailing" secondItem="8sx-SL-mkl" secondAttribute="trailing" constant="8" id="oDR-I6-xWn"/>
+                    <constraint firstItem="8sx-SL-mkl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fp9-2C-7Ld"/>
+                    <constraint firstAttribute="trailing" secondItem="8sx-SL-mkl" secondAttribute="trailing" id="oDR-I6-xWn"/>
                     <constraint firstAttribute="bottom" secondItem="8sx-SL-mkl" secondAttribute="bottom" constant="8" id="twC-7n-Juh"/>
                 </constraints>
             </tableViewCellContentView>

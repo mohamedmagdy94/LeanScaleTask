@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FPN-H4-d9P" userLabel="rootView">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="16" y="92" width="382" height="770"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-rj-Rui" userLabel="viewTitle">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <searchBar contentMode="redraw" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="zlV-xw-Bfs" userLabel="gamesSearchBar">
-                                        <rect key="frame" x="0.0" y="54.5" width="414" height="51"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="382" height="51"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aep-18-in4" userLabel="gamesTableView">
-                                        <rect key="frame" x="0.0" y="121.5" width="414" height="648.5"/>
+                                        <rect key="frame" x="0.0" y="121.5" width="382" height="648.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="Y6W-OH-hqX" id="6hL-WL-Mty"/>
@@ -46,8 +46,8 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FPN-H4-d9P" secondAttribute="bottom" id="0oh-lh-w7m"/>
                             <constraint firstItem="FPN-H4-d9P" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="AbV-fx-FkU"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FPN-H4-d9P" secondAttribute="trailing" id="Gdl-8x-5aQ"/>
-                            <constraint firstItem="FPN-H4-d9P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Omv-X2-WQQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FPN-H4-d9P" secondAttribute="trailing" constant="16" id="Gdl-8x-5aQ"/>
+                            <constraint firstItem="FPN-H4-d9P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Omv-X2-WQQ"/>
                         </constraints>
                     </view>
                     <connections>

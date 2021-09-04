@@ -14,6 +14,7 @@ class GameListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
     private func setup(){
@@ -35,5 +36,9 @@ extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.REUSE_IDENTIFIER, for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
