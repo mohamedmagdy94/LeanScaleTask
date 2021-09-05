@@ -20,11 +20,11 @@ class GameListLocalReprository: GameLocalReprositoryProtocol{
     
     func save(models: [Game]){
         guard let modelsEncoded = try? jsonEncoder.encode(models) else{ return }
-        userDefaultsService.setValue(modelsEncoded, forKey: LocalStorageKey.CACHED_MOVIES.rawValue)
+        userDefaultsService.setValue(modelsEncoded, forKey: LocalStorageKey.CACHED_GAMES.rawValue)
     }
     
     func fetchAll()->[Game]?{
-        guard let cachedMoviesEncoded = userDefaultsService.data(forKey: LocalStorageKey.CACHED_MOVIES.rawValue) else{ return nil }
+        guard let cachedMoviesEncoded = userDefaultsService.data(forKey: LocalStorageKey.CACHED_GAMES.rawValue) else{ return nil }
         let cachedMoviesDecoded = try? jsonDecoder.decode([Game].self, from: cachedMoviesEncoded)
         return cachedMoviesDecoded
         

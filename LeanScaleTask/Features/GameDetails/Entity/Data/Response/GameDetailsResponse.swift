@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - GameDetailsResponse
-struct GameDetailsResponse {
+struct GameDetailsResponse: Codable {
     let id: Int?
     let slug, name, nameOriginal, gameDetailsResponseDescription: String?
     let metacritic: Int?
@@ -46,58 +46,54 @@ struct GameDetailsResponse {
 
 
 // MARK: - Developer
-struct Developer {
+struct Developer: Codable {
     let id: Int?
     let name, slug: String?
     let gamesCount: Int?
     let imageBackground: String?
     let domain: String?
-    let language: Language?
+    let language: String?
 }
 
-enum Language {
-    case eng
-}
 
 
 
 // MARK: - MetacriticPlatform
-struct MetacriticPlatform {
+struct MetacriticPlatform: Codable {
     let metascore: Int?
     let url: String?
     let platform: MetacriticPlatformPlatform?
 }
 
 // MARK: - MetacriticPlatformPlatform
-struct MetacriticPlatformPlatform {
+struct MetacriticPlatformPlatform: Codable {
     let platform: Int?
     let name, slug: String?
 }
 
 // MARK: - ParentPlatform
-struct ParentPlatform {
+struct ParentPlatform: Codable {
     let platform: EsrbRating?
 }
 
 // MARK: - PlatformElement
-struct PlatformElement {
+struct PlatformElement: Codable {
     let platform: PlatformPlatform?
     let releasedAt: String?
     let requirements: Requirements?
 }
 
 // MARK: - PlatformPlatform
-struct PlatformPlatform {
+struct PlatformPlatform: Codable {
     let id: Int?
     let name, slug: String?
-    let image, yearEnd: NSNull?
     let yearStart: Int?
     let gamesCount: Int?
     let imageBackground: String?
 }
 
 // MARK: - Requirements
-struct Requirements {
+struct Requirements: Codable {
     let minimum, recommended: String?
 }
 

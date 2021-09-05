@@ -18,23 +18,23 @@ class OpenedGameReprository: OpenedGameReprositoryProtocol{
     private var userDefaultsService = UserDefaults.standard
 
     func save(game: Game){
-        var openedMovies = [Game]()
-        if let openedMoviesEncoded = userDefaultsService.data(forKey: LocalStorageKey.OPENED_MOVIES.rawValue){
-            if let openedMoviesDecoded = try? jsonDecoder.decode([Game].self, from: openedMoviesEncoded){
-                openedMovies = openedMoviesDecoded
+        var openedGames = [Game]()
+        if let openedGamesEncoded = userDefaultsService.data(forKey: LocalStorageKey.OPENED_GAMES.rawValue){
+            if let openedGamesDecoded = try? jsonDecoder.decode([Game].self, from: openedGamesEncoded){
+                openedGames = openedGamesDecoded
             }
         }
-        openedMovies.append(game)
-        guard let openedMoviesDecoded = try? jsonEncoder.encode(openedMovies) else{ return }
-        userDefaultsService.setValue(openedMoviesDecoded, forKey: LocalStorageKey.OPENED_MOVIES.rawValue)
+        openedGames.append(game)
+        guard let openedGamesDecoded = try? jsonEncoder.encode(openedGames) else{ return }
+        userDefaultsService.setValue(openedGamesDecoded, forKey: LocalStorageKey.OPENED_GAMES.rawValue)
     }
     
     func getAll()->[Game]{
-        var openedMovies = [Game]()
-        guard let openedMoviesEncoded = userDefaultsService.data(forKey: LocalStorageKey.OPENED_MOVIES.rawValue) else{ return openedMovies }
-        guard let openedMoviesDecoded = try? jsonDecoder.decode([Game].self, from: openedMoviesEncoded) else{ return openedMovies }
-        openedMovies = openedMoviesDecoded
-        return openedMovies
+        var openedGames = [Game]()
+        guard let openedGamesEncoded = userDefaultsService.data(forKey: LocalStorageKey.OPENED_GAMES.rawValue) else{ return openedGames }
+        guard let openedGamesDecoded = try? jsonDecoder.decode([Game].self, from: openedGamesEncoded) else{ return openedGames }
+        openedGames = openedGamesDecoded
+        return openedGames
         
     }
 }

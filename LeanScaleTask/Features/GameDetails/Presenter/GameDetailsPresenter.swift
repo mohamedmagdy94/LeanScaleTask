@@ -11,9 +11,9 @@ class GameDetailsPresenter: GameDetailsPresenterProtocol{
     
     var describtionLinesNumber: Int
     var isDescribtionExpanded: Bool
-    var gameDetailsResponse: GameDetailsResponse?
     var interactor: GameDetailsInteractorProtocol?
     var view: GameDetailsViewProtocol?
+    private var gameDetailsResponse: GameDetailsResponse?
 
     init(interactor: GameDetailsInteractorProtocol? = nil, view: GameDetailsViewProtocol? = nil) {
         self.describtionLinesNumber = 3
