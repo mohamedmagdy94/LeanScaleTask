@@ -104,7 +104,6 @@ class GameListPresenter: GameListPresenterProtocol{
             return
         }
         var fetchedGames = result
-        var lastItemIndex = page.data.count - 1
         if page.isRemote{
             fetchedGames.data = page.data + fetchedGames.data
         }

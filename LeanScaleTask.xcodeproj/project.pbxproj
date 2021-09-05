@@ -82,6 +82,7 @@
 		D9BF39A726E4DBB0006ABCFE /* OpenedGameMockReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A526E4DBB0006ABCFE /* OpenedGameMockReprository.swift */; };
 		D9BF39A926E4E84E006ABCFE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */; };
 		D9BF39AA26E4E84E006ABCFE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */; };
+		D9BF39AC26E50E09006ABCFE /* GameListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39AB26E50E09006ABCFE /* GameListTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		D9BF39A226E4DA69006ABCFE /* GameMockReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMockReprository.swift; sourceTree = "<group>"; };
 		D9BF39A526E4DBB0006ABCFE /* OpenedGameMockReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedGameMockReprository.swift; sourceTree = "<group>"; };
 		D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D9BF39AB26E50E09006ABCFE /* GameListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				D944CE8A26E3FD65002D3CD5 /* LeanScaleTaskTests.swift */,
 				D944CE8C26E3FD65002D3CD5 /* Info.plist */,
+				D9BF39AB26E50E09006ABCFE /* GameListTests.swift */,
 			);
 			path = LeanScaleTaskTests;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D944CE8B26E3FD65002D3CD5 /* LeanScaleTaskTests.swift in Sources */,
+				D9BF39AC26E50E09006ABCFE /* GameListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,7 +943,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanScaleTask.app/LeanScaleTask";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanScaleTaskDev.app/LeanScaleTaskDev";
 			};
 			name = Debug;
 		};
@@ -960,7 +964,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanScaleTask.app/LeanScaleTask";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeanScaleTaskDev.app/LeanScaleTaskDev";
 			};
 			name = Release;
 		};
