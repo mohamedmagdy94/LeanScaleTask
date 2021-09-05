@@ -19,7 +19,7 @@ enum GameDetailsNetworkRouter: NetworkRoutering {
     private var encoding: HTTPHelper.HTTPEncoding{
         switch self {
         case .getGameDetails:
-            return .body
+            return .query
         }
     }
     

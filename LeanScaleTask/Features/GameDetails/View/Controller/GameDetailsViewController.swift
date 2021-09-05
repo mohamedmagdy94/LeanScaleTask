@@ -22,6 +22,7 @@ class GameDetailsViewController: UIViewController {
     
     private func setup(){
         setupNavbar()
+        presenter?.onScreenAppeared()
     }
     
     private func setupNavbar(){
@@ -29,19 +30,19 @@ class GameDetailsViewController: UIViewController {
     }
     
     @objc private func makeItemFavourite(){
-        
+        presenter?.onFavouriteItemRequest()
     }
     
     @IBAction func toggleReadButton(_ sender: Any) {
-        
+        presenter?.toggleRead()
     }
     
     @IBAction func visitRedditButton(_ sender: Any) {
-        
+        presenter?.openReddit()
     }
     
     @IBAction func visitWebsiteButton(_ sender: Any) {
-        
+        presenter?.openWebsite()
     }
 }
 
