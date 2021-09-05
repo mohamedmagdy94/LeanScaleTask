@@ -7,7 +7,12 @@
 
 import Foundation
 
-class OpenedGameReprository{
+protocol OpenedGameReprositoryProtocol {
+    func save(game: Game)
+    func getAll()->[Game]
+}
+
+class OpenedGameReprository: OpenedGameReprositoryProtocol{
     private var jsonEncoder = JSONEncoder()
     private var jsonDecoder = JSONDecoder()
     private var userDefaultsService = UserDefaults.standard

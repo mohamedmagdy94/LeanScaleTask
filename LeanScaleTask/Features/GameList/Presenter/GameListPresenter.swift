@@ -70,7 +70,8 @@ class GameListPresenter: GameListPresenterProtocol{
         guard let page = page else{ return }
         let selectedGame = page.data[index]
         interactor?.onGameOpened(game: selectedGame)
-        router?.showGames(with: selectedGame)
+        cells[index].color = .lightGray
+        router?.showGameDetails(with: selectedGame)
     }
     
     func onGamesFetched(result: Result<Page<Game>, GameListError>) {
@@ -85,6 +86,7 @@ class GameListPresenter: GameListPresenterProtocol{
     private func handleFetchGamesSuccess(with result: Page<Game>){
         guard let page = page else{
             self.page = result
+            cells = result.data.map{[weak self] in GameListCellViewModel(imageURL: $0.backgroundImage ?? "", title: $0.name ?? "", metacritic: "\($0.metacritic ?? 0)" , categories: "\(self?.convertGameCategoriesToString(with: $0.tags) ?? "")", color: $0.isOpened ?? false ? .lightGray : .white) }
             view?.reloadList()
             return
         }
@@ -92,6 +94,12 @@ class GameListPresenter: GameListPresenterProtocol{
         let lastItemIndex = page.data.count
         fetchedGames.data = page.data + fetchedGames.data
         view?.focusOnItem(with: lastItemIndex)
+    }
+    
+    private func convertGameCategoriesToString(with tags: [Tag]?)->String{
+        guard let tags = tags else{ return "" }
+        let tag = tags.map{ $0.name ?? "" }.joined(separator: ", ")
+        return tag
     }
     
     private func handleFetchGamesError(with error: GameListError){
@@ -102,4 +110,11 @@ class GameListPresenter: GameListPresenterProtocol{
             break
         }
     }
+    
+    func updateGame(game: Game) {
+        guard let page = page else{ return }
+        guard let gameIndex = (page.data.firstIndex{ $0.id == game.id }) else { return }
+        self.page?.data[gameIndex] = game
+    }
+    
 }

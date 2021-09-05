@@ -57,3 +57,27 @@ extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
         presenter?.onGameSelected(index: indexPath.item)
     }
 }
+
+extension GameListViewController:GameListViewProtocol{
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
+    
+    func showError(message: String) {
+        
+    }
+    
+    func reloadList() {
+        
+    }
+    
+    func focusOnItem(with index: Int) {
+        
+    }
+    
+    
+}

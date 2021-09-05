@@ -7,7 +7,12 @@
 
 import Foundation
 
-class GameListLocalReprository{
+protocol GameLocalReprositoryProtocol {
+    func save(models: [Game])
+    func fetchAll()->[Game]?
+}
+
+class GameListLocalReprository: GameLocalReprositoryProtocol{
     
     private var jsonEncoder = JSONEncoder()
     private var jsonDecoder = JSONDecoder()

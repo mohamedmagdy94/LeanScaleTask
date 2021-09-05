@@ -7,7 +7,12 @@
 
 import Foundation
 
-class GameRemoteReprository {
+protocol GameRemoteReprositoryProtocol {
+    func fetchAll(with request: GameListRequest,onFetch: @escaping (Result<GameListResponse,HTTPHelper.NetworkError>)->Void)
+}
+
+
+class GameRemoteReprository: GameRemoteReprositoryProtocol {
     
     func fetchAll(with request: GameListRequest,onFetch: @escaping (Result<GameListResponse,HTTPHelper.NetworkError>)->Void){
         let request = GameListNetworkRouter.getGames(request: request)

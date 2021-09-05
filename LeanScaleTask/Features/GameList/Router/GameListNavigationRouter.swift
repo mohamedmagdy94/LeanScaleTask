@@ -8,7 +8,7 @@
 import Foundation
 import UIKit.UIViewController
 
-class GameListNavigationRouter {
+class GameListNavigationRouter: GameListNavigationRouterProtocol {
     static func createModule()->UIViewController{
         guard let gameListView = UIViewController.create(storyboardName: Storyboard.GameList.rawValue, viewControllerID: ViewController.GameListViewController.rawValue) else{ return UIViewController() }
         return gameListView
@@ -20,9 +20,8 @@ class GameListNavigationRouter {
         self.screen = screen
     }
     
-    func showGameDetails(){
+    func showGameDetails(with game: Game) {
         
     }
-    
     
 }

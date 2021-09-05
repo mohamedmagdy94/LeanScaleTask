@@ -9,11 +9,11 @@ import Foundation
 
 class GameListInteractor:GameListInteractorProtocol{
     
-    private var gameReprository: GameListReprository
-    private var openedGameReprository: OpenedGameReprository
-    private var presenter: GameListPresenterOutputProtocol?
+    private var gameReprository: GameListReprositoryProtocol
+    private var openedGameReprository: OpenedGameReprositoryProtocol
+    var presenter: GameListPresenterOutputProtocol?
     
-    init(gameReprository: GameListReprository, openedGameReprository: OpenedGameReprository, presenter: GameListPresenterOutputProtocol? = nil) {
+    init(gameReprository: GameListReprositoryProtocol, openedGameReprository: OpenedGameReprositoryProtocol, presenter: GameListPresenterOutputProtocol?) {
         self.gameReprository = gameReprository
         self.openedGameReprository = openedGameReprository
         self.presenter = presenter

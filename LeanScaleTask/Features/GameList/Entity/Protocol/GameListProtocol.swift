@@ -18,6 +18,7 @@ protocol GameListPresenterInputProtocol{
 
 protocol GameListPresenterOutputProtocol{
     func onGamesFetched(result: Result<Page<Game>,GameListError>)
+    func updateGame(game: Game)
 }
 
 typealias GameListPresenterProtocol = GameListPresenterInputProtocol & GameListPresenterOutputProtocol
@@ -29,7 +30,7 @@ protocol GameListInteractorProtocol {
 }
 
 protocol GameListNavigationRouterProtocol {
-    func showGames(with game: Game)
+    func showGameDetails(with game: Game)
 }
 
 protocol GameListViewProtocol {

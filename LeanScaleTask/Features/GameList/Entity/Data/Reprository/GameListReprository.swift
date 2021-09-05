@@ -7,14 +7,18 @@
 
 import Foundation
 
-class GameListReprository{
+protocol GameListReprositoryProtocol {
+    func fetchAll(with request: GameListRequest,onFetch: @escaping (Result<Page<Game>,HTTPHelper.NetworkError>)->Void)
+}
+
+class GameListReprository: GameListReprositoryProtocol{
     
     private var remoteReprository: GameRemoteReprository
     private var gameListLocalReprository: GameListLocalReprository
     
-    init(remoteReprository: GameRemoteReprository, gameListLocalReprository: GameListLocalReprository) {
-        self.remoteReprository = remoteReprository
-        self.gameListLocalReprository = gameListLocalReprository
+    init() {
+        self.remoteReprository = GameRemoteReprository()
+        self.gameListLocalReprository = GameListLocalReprository()
     }
     
     func fetchAll(with request: GameListRequest,onFetch: @escaping (Result<Page<Game>,HTTPHelper.NetworkError>)->Void){
