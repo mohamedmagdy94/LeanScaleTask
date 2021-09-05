@@ -16,7 +16,7 @@ class HomeViewController: UITabBarController {
     
     private func setup(){
         let gamesListScreen = GameListNavigationRouter.createModule(isMocking: false)
-        gamesListScreen.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        gamesListScreen.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         let favouritesScreen = FavouriteListNavigationRouter.createModule(isMocking: false)
         favouritesScreen.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         viewControllers = [gamesListScreen,favouritesScreen]

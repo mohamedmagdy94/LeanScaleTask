@@ -45,7 +45,7 @@ class FavouriteGameReprository: FavouriteGameReprositoryProtcol{
                 favouriteGames = favouriteGamesDecoded
             }
         }
-        favouriteGames = favouriteGames.filter{ $0.id == game.id } 
+        favouriteGames = favouriteGames.filter{ $0.id != game.id } 
         guard let favouriteGamesDecoded = try? jsonEncoder.encode(favouriteGames) else{ return }
         userDefaultsService.setValue(favouriteGamesDecoded, forKey: LocalStorageKey.FAVOURITE_GAMES.rawValue)
     }
