@@ -11,6 +11,7 @@ class GameDetailsViewController: UIViewController {
 
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var gameDescribtionValueLabel: UILabel!
+    @IBOutlet weak var gameNameLabel: UILabel!
     
     
     override func viewDidLoad() {
