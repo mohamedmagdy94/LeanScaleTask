@@ -11,6 +11,8 @@ class GameListViewController: UIViewController {
     
     @IBOutlet weak var gamesSearchBar: UISearchBar!
     @IBOutlet private weak var gamesTableView: UITableView!
+    var presenter: GameListPresenterInputProtocol?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,7 @@ class GameListViewController: UIViewController {
     
     private func setup(){
         setupTable()
+        presenter?.onScreenAppeared()
     }
     
     private func setupTable(){
@@ -30,11 +33,14 @@ class GameListViewController: UIViewController {
 
 extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return presenter?.cellsCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.REUSE_IDENTIFIER, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.REUSE_IDENTIFIER, for: indexPath) as! GameTableViewCell
+        if let presenter = presenter{
+            cell.config(with: presenter.cells[indexPath.row])
+        }
         return cell
     }
     
@@ -48,6 +54,6 @@ extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.onGameSelected(index: indexPath.item)
     }
 }
