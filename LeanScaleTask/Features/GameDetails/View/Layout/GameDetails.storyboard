@@ -126,9 +126,17 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugo-Pf-T8G" userLabel="gameNameLabel">
+                                                <rect key="frame" x="203.5" y="291" width="7" height="29"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="Ugo-Pf-T8G" firstAttribute="bottom" secondItem="5zL-Wo-76z" secondAttribute="bottom" id="1po-eD-zCT"/>
+                                            <constraint firstItem="Ugo-Pf-T8G" firstAttribute="centerX" secondItem="5zL-Wo-76z" secondAttribute="centerX" id="HBE-Ag-WWU"/>
                                             <constraint firstItem="cIk-ar-acb" firstAttribute="leading" secondItem="cSr-yc-GfM" secondAttribute="leading" id="Q3S-u3-NKZ"/>
                                             <constraint firstItem="cIk-ar-acb" firstAttribute="top" secondItem="cSr-yc-GfM" secondAttribute="top" id="W4w-yA-yti"/>
                                             <constraint firstAttribute="trailing" secondItem="cIk-ar-acb" secondAttribute="trailing" id="hL1-JX-uu4"/>
@@ -159,6 +167,7 @@
                     <connections>
                         <outlet property="gameDescribtionValueLabel" destination="11T-iy-Kk7" id="tnL-hP-PAR"/>
                         <outlet property="gameImageView" destination="5zL-Wo-76z" id="3yd-Rl-uF7"/>
+                        <outlet property="gameNameLabel" destination="Ugo-Pf-T8G" id="wZS-Dt-2ha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
