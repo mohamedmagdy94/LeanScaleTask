@@ -18,8 +18,12 @@ class FavouriteListViewController: UIViewController {
         setup()
     }
     
-    private func setup(){
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter?.onScreenAppeared()
+    }
+    
+    private func setup(){
         let cellNib = UINib(nibName: GameTableViewCell.NIB_NAME, bundle: nil)
         favouritesTableView.register(cellNib, forCellReuseIdentifier: GameTableViewCell.REUSE_IDENTIFIER)
     }

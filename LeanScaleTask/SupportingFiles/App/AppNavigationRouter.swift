@@ -10,7 +10,7 @@ import UIKit
 
 class AppNavigationRouter{
     static func createModule()->UINavigationController{
-        let firstScreen = GameListNavigationRouter.createModule(isMocking: false)
+        let firstScreen = HomeViewController.create()
         let navigationController = UINavigationController(rootViewController: firstScreen)
         return navigationController
     }

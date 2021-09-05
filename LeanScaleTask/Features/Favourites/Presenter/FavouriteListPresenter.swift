@@ -38,6 +38,7 @@ class FavouriteListPresenter: FavouriteListPresenterProtocol {
     
     func onUnfavouriteGame(index: Int) {
         itemToRemoveIndex = index
+        view?.confirmDelete()
     }
     
     func onDeleteConfirmed() {

@@ -11,4 +11,5 @@ enum ViewController: String{
     case GameListViewController
     case GameDetailsViewController
     case FavouriteListViewController
+    case HomeViewController
 }
