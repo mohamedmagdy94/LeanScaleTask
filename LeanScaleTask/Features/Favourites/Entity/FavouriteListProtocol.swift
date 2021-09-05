@@ -34,6 +34,7 @@ protocol FavouriteListViewProtocol {
     func showError(message: String)
     func reloadItems()
     func confirmDelete()
+    func toggleEmptyStateVisibility(isHidden: Bool)
 }
 
 protocol FavouriteListRouterProtocol {

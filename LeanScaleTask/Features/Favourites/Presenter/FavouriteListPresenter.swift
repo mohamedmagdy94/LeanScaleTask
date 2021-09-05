@@ -15,10 +15,12 @@ class FavouriteListPresenter: FavouriteListPresenterProtocol {
     var cells: [GameListCellViewModel]
     var games: [Game]
     var itemToRemoveIndex: Int?
+    var view: FavouriteListViewProtocol?
     
-    init(interactor: FavouriteListInteractorProtocol? = nil, router: FavouriteListRouterProtocol? = nil) {
+    init(interactor: FavouriteListInteractorProtocol? = nil, router: FavouriteListRouterProtocol? = nil,view: FavouriteListViewProtocol? = nil) {
         self.interactor = interactor
         self.router = router
+        self.view = view
         self.cellsCount = 0
         self.cells = []
         self.games = []
@@ -52,6 +54,9 @@ class FavouriteListPresenter: FavouriteListPresenterProtocol {
     func onFavouriteListFetched(result: [Game]) {
         games = result
         cells = result.map{[weak self] in GameListCellViewModel(imageURL: $0.background_image ?? "", title: $0.name ?? "", metacritic: "\($0.metacritic ?? 0)" , categories: "\(self?.convertGameCategoriesToString(with: $0.tags) ?? "")", color:.white) }
+        cellsCount = cells.count
+        view?.toggleEmptyStateVisibility(isHidden: cellsCount != 0)
+        view?.reloadItems()
     }
     
     private func convertGameCategoriesToString(with tags: [Tag]?)->String{

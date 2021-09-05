@@ -58,6 +58,10 @@ extension FavouriteListViewController: UITableViewDelegate,UITableViewDataSource
 
 extension FavouriteListViewController: FavouriteListViewProtocol{
     
+    func toggleEmptyStateVisibility(isHidden: Bool) {
+        emptyStateLabel.isHidden = isHidden
+    }
+
     func showLoading() {
         self.view.showLoading()
     }
