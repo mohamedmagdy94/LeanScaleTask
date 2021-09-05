@@ -87,6 +87,10 @@
 		D98DAE5226E566FD00FED1D3 /* FavouriteGameReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE5026E566FD00FED1D3 /* FavouriteGameReprository.swift */; };
 		D98DAE5426E5691000FED1D3 /* GameDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE5326E5691000FED1D3 /* GameDetailsConfigurator.swift */; };
 		D98DAE5526E5691000FED1D3 /* GameDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE5326E5691000FED1D3 /* GameDetailsConfigurator.swift */; };
+		D98DAE5C26E5708900FED1D3 /* FavouriteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98DAE5B26E5708900FED1D3 /* FavouriteList.storyboard */; };
+		D98DAE5D26E5708900FED1D3 /* FavouriteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98DAE5B26E5708900FED1D3 /* FavouriteList.storyboard */; };
+		D98DAE6126E570B600FED1D3 /* FavouriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */; };
+		D98DAE6226E570B600FED1D3 /* FavouriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */; };
 		D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */; };
 		D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */; };
 		D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF399126E4C183006ABCFE /* GameListError.swift */; };
@@ -179,6 +183,8 @@
 		D98DAE4D26E5659800FED1D3 /* GameDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsInteractor.swift; sourceTree = "<group>"; };
 		D98DAE5026E566FD00FED1D3 /* FavouriteGameReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGameReprository.swift; sourceTree = "<group>"; };
 		D98DAE5326E5691000FED1D3 /* GameDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsConfigurator.swift; sourceTree = "<group>"; };
+		D98DAE5B26E5708900FED1D3 /* FavouriteList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavouriteList.storyboard; sourceTree = "<group>"; };
+		D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListViewController.swift; sourceTree = "<group>"; };
 		D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListProtocol.swift; sourceTree = "<group>"; };
 		D9BF399126E4C183006ABCFE /* GameListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListError.swift; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 		D944CEF126E40E0E002D3CD5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D98DAE5626E5704D00FED1D3 /* Favourites */,
 				D9BF39AD26E52DFC006ABCFE /* GameDetails */,
 				D944CED626E40808002D3CD5 /* GameList */,
 			);
@@ -566,6 +573,39 @@
 				D98DAE4426E5642400FED1D3 /* GameDetailsRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		D98DAE5626E5704D00FED1D3 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE5726E5705300FED1D3 /* View */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		D98DAE5726E5705300FED1D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE5F26E570A500FED1D3 /* Controller */,
+				D98DAE5E26E5709E00FED1D3 /* Layout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D98DAE5E26E5709E00FED1D3 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE5B26E5708900FED1D3 /* FavouriteList.storyboard */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		D98DAE5F26E570A500FED1D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D9BF398A26E4BABC006ABCFE /* Presenter */ = {
@@ -760,6 +800,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98DAE5C26E5708900FED1D3 /* FavouriteList.storyboard in Resources */,
 				D944CE8026E3FD65002D3CD5 /* LaunchScreen.storyboard in Resources */,
 				D9BF39B026E52E35006ABCFE /* GameDetails.storyboard in Resources */,
 				D944CE7D26E3FD65002D3CD5 /* Assets.xcassets in Resources */,
@@ -787,6 +828,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98DAE5D26E5708900FED1D3 /* FavouriteList.storyboard in Resources */,
 				D944CEBE26E405AB002D3CD5 /* LaunchScreen.storyboard in Resources */,
 				D9BF39B126E52E35006ABCFE /* GameDetails.storyboard in Resources */,
 				D944CEBF26E405AB002D3CD5 /* Assets.xcassets in Resources */,
@@ -829,6 +871,7 @@
 				D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
 				D9BF39B526E52E91006ABCFE /* GameDetailsViewController.swift in Sources */,
 				D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */,
+				D98DAE6126E570B600FED1D3 /* FavouriteListViewController.swift in Sources */,
 				D944CF1226E41921002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
 				D98DAE4B26E5650800FED1D3 /* GameReprository.swift in Sources */,
@@ -890,6 +933,7 @@
 				D944CF0626E411EF002D3CD5 /* AppNavigationRouter.swift in Sources */,
 				D944CF2026E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEEA26E40952002D3CD5 /* GameListViewController.swift in Sources */,
+				D98DAE6226E570B600FED1D3 /* FavouriteListViewController.swift in Sources */,
 				D944CF3526E42911002D3CD5 /* GameListReprository.swift in Sources */,
 				D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
 				D9BF399326E4D14A006ABCFE /* GameListPresenter.swift in Sources */,
