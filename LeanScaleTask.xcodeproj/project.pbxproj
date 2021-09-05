@@ -73,6 +73,8 @@
 		D98DAE3926E55EB100FED1D3 /* GameDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE3726E55EB100FED1D3 /* GameDetailsResponse.swift */; };
 		D98DAE3C26E55F8D00FED1D3 /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE3B26E55F8D00FED1D3 /* GameDetailsViewModel.swift */; };
 		D98DAE3D26E55F8D00FED1D3 /* GameDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE3B26E55F8D00FED1D3 /* GameDetailsViewModel.swift */; };
+		D98DAE4026E5619A00FED1D3 /* GameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE3F26E5619A00FED1D3 /* GameDetailsPresenter.swift */; };
+		D98DAE4126E5619A00FED1D3 /* GameDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE3F26E5619A00FED1D3 /* GameDetailsPresenter.swift */; };
 		D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */; };
 		D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */; };
 		D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF399126E4C183006ABCFE /* GameListError.swift */; };
@@ -158,6 +160,7 @@
 		D98DAE3226E55E2500FED1D3 /* GameDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsProtocol.swift; sourceTree = "<group>"; };
 		D98DAE3726E55EB100FED1D3 /* GameDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsResponse.swift; sourceTree = "<group>"; };
 		D98DAE3B26E55F8D00FED1D3 /* GameDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewModel.swift; sourceTree = "<group>"; };
+		D98DAE3F26E5619A00FED1D3 /* GameDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsPresenter.swift; sourceTree = "<group>"; };
 		D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListProtocol.swift; sourceTree = "<group>"; };
 		D9BF399126E4C183006ABCFE /* GameListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListError.swift; sourceTree = "<group>"; };
@@ -518,6 +521,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		D98DAE3E26E5618E00FED1D3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE3F26E5619A00FED1D3 /* GameDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D9BF398A26E4BABC006ABCFE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +566,7 @@
 		D9BF39AD26E52DFC006ABCFE /* GameDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D98DAE3E26E5618E00FED1D3 /* Presenter */,
 				D98DAE3126E55E1500FED1D3 /* Entity */,
 				D98DAE2D26E559FB00FED1D3 /* Router */,
 				D9BF39AE26E52E15006ABCFE /* View */,
@@ -784,6 +796,7 @@
 				D944CE7126E3FD63002D3CD5 /* AppDelegate.swift in Sources */,
 				D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */,
 				D9BF399726E4D2C6006ABCFE /* GameListInteractor.swift in Sources */,
+				D98DAE4026E5619A00FED1D3 /* GameDetailsPresenter.swift in Sources */,
 				D9BF399C26E4D861006ABCFE /* GameListConfigurator.swift in Sources */,
 				D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEDF26E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
@@ -846,6 +859,7 @@
 				D9BF39B626E52E91006ABCFE /* GameDetailsViewController.swift in Sources */,
 				D9BF399D26E4D861006ABCFE /* GameListConfigurator.swift in Sources */,
 				D944CEBA26E405AB002D3CD5 /* AppDelegate.swift in Sources */,
+				D98DAE4126E5619A00FED1D3 /* GameDetailsPresenter.swift in Sources */,
 				D944CF0326E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEE026E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 			);

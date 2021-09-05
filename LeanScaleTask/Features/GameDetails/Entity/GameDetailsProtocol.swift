@@ -18,13 +18,13 @@ protocol GameDetailsPresenterInputProtocol{
 
 protocol GameDetailsPresenterOutputProtocol{
     func onGameDetailsFetched(result: Result<GameDetailsResponse,GameListError>)
-    func makeGameFavourite()
 }
 
 typealias GameDetailsPresenterProtocol = GameDetailsPresenterInputProtocol & GameDetailsPresenterOutputProtocol
 
 protocol GameDetailsInteractorProtocol {
     func getGameDetails()
+    func makeItemFavourite()
 }
 
 protocol GameDetailsViewProtocol {

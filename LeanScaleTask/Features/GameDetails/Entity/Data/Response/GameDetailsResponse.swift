@@ -16,7 +16,7 @@ struct GameDetailsResponse {
     let released: String?
     let tba: Bool?
     let updated: String?
-    let backgroundImage, backgroundImageAdditional: String?
+    let background_image, backgroundImageAdditional: String?
     let website: String?
     let rating: Double?
     let ratingTop: Int?
@@ -26,12 +26,12 @@ struct GameDetailsResponse {
     let addedByStatus: AddedByStatus?
     let playtime, screenshotsCount, moviesCount, creatorsCount: Int?
     let achievementsCount, parentAchievementsCount: Int?
-    let redditURL: String?
+    let reddit_url: String?
     let redditName, redditDescription, redditLogo: String?
     let redditCount, twitchCount, youtubeCount, reviewsTextCount: Int?
     let ratingsCount, suggestionsCount: Int?
     let alternativeNames: [String]?
-    let metacriticURL: String?
+    let metacritic_url: String?
     let parentsCount, additionsCount, gameSeriesCount: Int?
     let reviewsCount: Int?
     let saturatedColor, dominantColor: String?
@@ -40,7 +40,7 @@ struct GameDetailsResponse {
     let stores: [Store]?
     let developers, genres, tags, publishers: [Developer]?
     let esrbRating: EsrbRating?
-    let descriptionRaw: String?
+    let description_raw: String?
 }
 
 
