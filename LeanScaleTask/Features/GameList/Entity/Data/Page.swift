@@ -8,7 +8,7 @@
 import Foundation
 
 struct Page<T>{
-    let data: [T]
+    var data: [T]
     let isRemote: Bool
     let hasMore: Bool
 }

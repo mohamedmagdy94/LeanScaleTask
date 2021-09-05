@@ -65,6 +65,9 @@
 		D944CF3526E42911002D3CD5 /* GameListReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3326E42911002D3CD5 /* GameListReprository.swift */; };
 		D944CF3726E42AAD002D3CD5 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3626E42AAD002D3CD5 /* Page.swift */; };
 		D944CF3826E42AAD002D3CD5 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944CF3626E42AAD002D3CD5 /* Page.swift */; };
+		D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */; };
+		D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */; };
+		D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF399126E4C183006ABCFE /* GameListError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		D944CF3026E4284F002D3CD5 /* LocalStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKey.swift; sourceTree = "<group>"; };
 		D944CF3326E42911002D3CD5 /* GameListReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListReprository.swift; sourceTree = "<group>"; };
 		D944CF3626E42AAD002D3CD5 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
+		D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListProtocol.swift; sourceTree = "<group>"; };
+		D9BF399126E4C183006ABCFE /* GameListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,7 @@
 		D944CED626E40808002D3CD5 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
+				D9BF398A26E4BABC006ABCFE /* Presenter */,
 				D944CEF926E410A9002D3CD5 /* Router */,
 				D944CEEB26E40C98002D3CD5 /* Entity */,
 				D944CED726E40821002D3CD5 /* View */,
@@ -313,8 +320,10 @@
 		D944CEEB26E40C98002D3CD5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D9BF398E26E4BBB5006ABCFE /* Protocol */,
 				D944CF0F26E41908002D3CD5 /* Data */,
 				D944CEEC26E40C9F002D3CD5 /* UI */,
+				D9BF399126E4C183006ABCFE /* GameListError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -417,6 +426,22 @@
 				D944CF3326E42911002D3CD5 /* GameListReprository.swift */,
 			);
 			path = Reprository;
+			sourceTree = "<group>";
+		};
+		D9BF398A26E4BABC006ABCFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D9BF398E26E4BBB5006ABCFE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,7 +617,9 @@
 				D944CF1F26E41D89002D3CD5 /* Codable+Extension.swift in Sources */,
 				D944CEFF26E41122002D3CD5 /* ViewController.swift in Sources */,
 				D944CF3426E42911002D3CD5 /* GameListReprository.swift in Sources */,
+				D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */,
 				D944CF2626E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
+				D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */,
 				D944CF1226E41921002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D944CEEE26E40CAD002D3CD5 /* GameListCellViewModel.swift in Sources */,
 				D944CF1926E41B85002D3CD5 /* GameListRequest.swift in Sources */,
@@ -600,6 +627,7 @@
 				D944CEFC26E410F6002D3CD5 /* Storyboard.swift in Sources */,
 				D944CE7B26E3FD63002D3CD5 /* LeanScaleTask.xcdatamodeld in Sources */,
 				D944CE7126E3FD63002D3CD5 /* AppDelegate.swift in Sources */,
+				D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */,
 				D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEDF26E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 				D944CF1526E4193D002D3CD5 /* GameListResponse.swift in Sources */,

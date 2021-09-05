@@ -9,7 +9,7 @@ import Foundation
 struct GameListResponse : Codable {
     let count: Int?
     let next: String?
-    let results: [Game]?
+    var results: [Game]?
     let userPlatforms: Bool?
 }
 
@@ -40,6 +40,7 @@ struct Game : Codable {
     let parentPlatforms: [Platform]?
     let genres: [Genre]?
     let communityRating: Int?
+    var isOpened: Bool?
 }
 
 // MARK: - AddedByStatus
