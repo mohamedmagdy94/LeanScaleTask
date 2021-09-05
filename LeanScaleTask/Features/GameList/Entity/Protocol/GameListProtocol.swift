@@ -17,7 +17,6 @@ protocol GameListPresenterInputProtocol{
 }
 
 protocol GameListPresenterOutputProtocol{
-    func onOpenedGamesFetched(games: [Game])
     func onGamesFetched(result: Result<Page<Game>,GameListError>)
 }
 

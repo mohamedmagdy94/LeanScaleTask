@@ -9,4 +9,5 @@ import Foundation
 
 enum LocalStorageKey: String{
     case CACHED_MOVIES
+    case OPENED_MOVIES
 }

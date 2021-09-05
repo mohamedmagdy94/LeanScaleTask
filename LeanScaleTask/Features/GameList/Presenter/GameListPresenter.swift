@@ -73,11 +73,6 @@ class GameListPresenter: GameListPresenterProtocol{
         router?.showGames(with: selectedGame)
     }
     
-    func onOpenedGamesFetched(games: [Game]) {
-        self.openedGames = games
-        view?.reloadList()
-    }
-    
     func onGamesFetched(result: Result<Page<Game>, GameListError>) {
         switch result {
         case .success(let result):
@@ -97,7 +92,6 @@ class GameListPresenter: GameListPresenterProtocol{
         let lastItemIndex = page.data.count
         fetchedGames.data = page.data + fetchedGames.data
         view?.focusOnItem(with: lastItemIndex)
-        
     }
     
     private func handleFetchGamesError(with error: GameListError){
