@@ -10,9 +10,9 @@ import Foundation
 class FavouriteListInteractor : FavouriteListInteractorProtocol{
    
     var presenter: FavouriteListPresenterOutputProtocol?
-    private var reprository: FavouriteGameReprository
+    private var reprository: FavouriteGameReprositoryProtcol
     
-    init(presenter: FavouriteListPresenterOutputProtocol? = nil, reprository: FavouriteGameReprository) {
+    init(presenter: FavouriteListPresenterOutputProtocol? = nil, reprository: FavouriteGameReprositoryProtcol) {
         self.presenter = presenter
         self.reprository = reprository
     }

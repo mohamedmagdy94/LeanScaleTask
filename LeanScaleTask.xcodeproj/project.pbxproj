@@ -97,6 +97,10 @@
 		D98DAE6A26E57C9100FED1D3 /* FavouriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */; };
 		D98DAE6D26E57E8500FED1D3 /* FavouriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6C26E57E8500FED1D3 /* FavouriteListInteractor.swift */; };
 		D98DAE6E26E57E8500FED1D3 /* FavouriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6C26E57E8500FED1D3 /* FavouriteListInteractor.swift */; };
+		D98DAE7126E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE7026E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift */; };
+		D98DAE7226E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE7026E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift */; };
+		D98DAE7426E57FE600FED1D3 /* FavouriteListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE7326E57FE600FED1D3 /* FavouriteListConfigurator.swift */; };
+		D98DAE7526E57FE600FED1D3 /* FavouriteListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE7326E57FE600FED1D3 /* FavouriteListConfigurator.swift */; };
 		D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */; };
 		D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */; };
 		D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF399126E4C183006ABCFE /* GameListError.swift */; };
@@ -194,6 +198,8 @@
 		D98DAE6426E5717C00FED1D3 /* FavouriteListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListProtocol.swift; sourceTree = "<group>"; };
 		D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListPresenter.swift; sourceTree = "<group>"; };
 		D98DAE6C26E57E8500FED1D3 /* FavouriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListInteractor.swift; sourceTree = "<group>"; };
+		D98DAE7026E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListNavigationRouter.swift; sourceTree = "<group>"; };
+		D98DAE7326E57FE600FED1D3 /* FavouriteListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListConfigurator.swift; sourceTree = "<group>"; };
 		D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListProtocol.swift; sourceTree = "<group>"; };
 		D9BF399126E4C183006ABCFE /* GameListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListError.swift; sourceTree = "<group>"; };
@@ -587,6 +593,7 @@
 		D98DAE5626E5704D00FED1D3 /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				D98DAE6F26E57F9100FED1D3 /* Router */,
 				D98DAE6B26E57E7700FED1D3 /* Interactor */,
 				D98DAE6726E57C2900FED1D3 /* Presenter */,
 				D98DAE6326E5716900FED1D3 /* Entity */,
@@ -642,6 +649,15 @@
 				D98DAE6C26E57E8500FED1D3 /* FavouriteListInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D98DAE6F26E57F9100FED1D3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE7026E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift */,
+				D98DAE7326E57FE600FED1D3 /* FavouriteListConfigurator.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		D9BF398A26E4BABC006ABCFE /* Presenter */ = {
@@ -885,6 +901,7 @@
 				D9BF39A926E4E84E006ABCFE /* UIView+Extension.swift in Sources */,
 				D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */,
 				D98DAE3326E55E2500FED1D3 /* GameDetailsProtocol.swift in Sources */,
+				D98DAE7126E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift in Sources */,
 				D944CF2E26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */,
 				D98DAE4526E5642400FED1D3 /* GameDetailsRequest.swift in Sources */,
 				D944CF3726E42AAD002D3CD5 /* Page.swift in Sources */,
@@ -926,6 +943,7 @@
 				D9BF399726E4D2C6006ABCFE /* GameListInteractor.swift in Sources */,
 				D98DAE4026E5619A00FED1D3 /* GameDetailsPresenter.swift in Sources */,
 				D9BF399C26E4D861006ABCFE /* GameListConfigurator.swift in Sources */,
+				D98DAE7426E57FE600FED1D3 /* FavouriteListConfigurator.swift in Sources */,
 				D944CF0226E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEDF26E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 				D944CF1526E4193D002D3CD5 /* GameListResponse.swift in Sources */,
@@ -979,6 +997,7 @@
 				D9BF399326E4D14A006ABCFE /* GameListPresenter.swift in Sources */,
 				D944CF1626E41B76002D3CD5 /* GameListNetworkRouter.swift in Sources */,
 				D9BF39AA26E4E84E006ABCFE /* UIView+Extension.swift in Sources */,
+				D98DAE7226E57F9F00FED1D3 /* FavouriteListNavigationRouter.swift in Sources */,
 				D944CF1726E41B79002D3CD5 /* GameListResponse.swift in Sources */,
 				D98DAE3926E55EB100FED1D3 /* GameDetailsResponse.swift in Sources */,
 				D944CF1A26E41B85002D3CD5 /* GameListRequest.swift in Sources */,
@@ -999,6 +1018,7 @@
 				D944CF0326E4115E002D3CD5 /* UIViewController+Extension.swift in Sources */,
 				D944CEE026E408F9002D3CD5 /* GameTableViewCell.swift in Sources */,
 				D98DAE6E26E57E8500FED1D3 /* FavouriteListInteractor.swift in Sources */,
+				D98DAE7526E57FE600FED1D3 /* FavouriteListConfigurator.swift in Sources */,
 				D98DAE5526E5691000FED1D3 /* GameDetailsConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
