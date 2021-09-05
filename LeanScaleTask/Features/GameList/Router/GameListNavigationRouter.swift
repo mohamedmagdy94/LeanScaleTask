@@ -23,7 +23,8 @@ class GameListNavigationRouter: GameListNavigationRouterProtocol {
     }
     
     func showGameDetails(with game: Game) {
-        
+        let gameDetailsScreen = GameDetailsNavigationRouter.createModule(isMocking: false)
+        self.screen.navigationController?.pushViewController(gameDetailsScreen, animated: true)
     }
     
 }

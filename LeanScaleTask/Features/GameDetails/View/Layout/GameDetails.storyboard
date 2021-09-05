@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Details View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GameDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GameDetailsViewController" customModule="LeanScaleTaskDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11z-Ds-82Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-yc-GfM" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="612.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-ar-acb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="612.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5zL-Wo-76z" userLabel="gameImage">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="320" id="kUA-cp-wWD"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfS-mz-ZGF">
+                                                        <rect key="frame" x="0.0" y="336" width="414" height="276.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-4L-y8r">
+                                                                <rect key="frame" x="12" y="0.0" width="402" height="276.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-Zn-zel" userLabel="gameDescribtionTitleLabel">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="402" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11T-iy-Kk7" userLabel="gameDescribtionValueLabel">
+                                                                        <rect key="frame" x="0.0" y="35.5" width="402" height="49"/>
+                                                                        <string key="text">&lt;p&gt;Rockstar Games went bigger, since their previous installment of the series. You get the complicated and realistic world-building from Liberty City of GTA4 in the setting of lively and diverse Los Santos, from an old fan favorite GTA San Andreas. 561 different vehicles (including every transport you can operate) and the amount is rising with every update. &lt;br /&gt;\nSimultaneous storytelling from three unique perspectives: &lt;br /&gt;\nFollow Michael, ex-criminal living his life of leisure away from the past, Franklin, a kid that seeks the better future, and Trevor, the exact past Michael is trying to run away from. &lt;br /&gt;\nGTA Online will provide a lot of additional challenge even for the experienced players, coming fresh from the story mode. Now you will have other players around that can help you just as likely as ruin your mission. Every GTA mechanic up to date can be experienced by players through the unique customizable character, and community content paired with the leveling system tends to keep everyone busy and engaged.&lt;/p&gt;</string>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdO-md-wmN" userLabel="toggleReadButton">
+                                                                        <rect key="frame" x="0.0" y="100.5" width="402" height="31"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                        <state key="normal" title="Read More...">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <state key="selected" title="Read Less..."/>
+                                                                        <connections>
+                                                                            <action selector="toggleReadButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3OO-BT-NiB"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JuN-NI-g2K">
+                                                                        <rect key="frame" x="0.0" y="147.5" width="402" height="48"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaN-FP-p69" userLabel="borderView">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="402" height="1"/>
+                                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="1" id="S8I-aK-hHa"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyc-OG-GxE" userLabel="visitRedditButton">
+                                                                                <rect key="frame" x="0.0" y="17" width="402" height="31"/>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                                <state key="normal" title="Vist Reddit">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="visitRedditButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mVU-2H-hZa"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jgi-aQ-BeX">
+                                                                        <rect key="frame" x="0.0" y="211.5" width="402" height="48"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-uQ-6jt" userLabel="borderView">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="402" height="1"/>
+                                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="1" id="Gdr-du-L4m"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-Pu-Ypr" userLabel="visitWebsiteButton">
+                                                                                <rect key="frame" x="0.0" y="17" width="402" height="31"/>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                                <state key="normal" title="Vist Website">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="visitWebsiteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rhf-RG-4jR"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="At2-mt-JYU" userLabel="borderView">
+                                                                        <rect key="frame" x="0.0" y="275.5" width="402" height="1"/>
+                                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="58G-gR-9Se"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="xX8-4L-y8r" firstAttribute="leading" secondItem="JfS-mz-ZGF" secondAttribute="leading" constant="12" id="CN2-gW-pV9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xX8-4L-y8r" secondAttribute="trailing" id="NRw-Ns-zAs"/>
+                                                            <constraint firstItem="xX8-4L-y8r" firstAttribute="top" secondItem="JfS-mz-ZGF" secondAttribute="top" id="pFC-Rh-Nty"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xX8-4L-y8r" secondAttribute="bottom" id="xmh-A5-mrG"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cIk-ar-acb" firstAttribute="leading" secondItem="cSr-yc-GfM" secondAttribute="leading" id="Q3S-u3-NKZ"/>
+                                            <constraint firstItem="cIk-ar-acb" firstAttribute="top" secondItem="cSr-yc-GfM" secondAttribute="top" id="W4w-yA-yti"/>
+                                            <constraint firstAttribute="trailing" secondItem="cIk-ar-acb" secondAttribute="trailing" id="hL1-JX-uu4"/>
+                                            <constraint firstAttribute="bottom" secondItem="cIk-ar-acb" secondAttribute="bottom" id="n9W-Uw-AjV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cSr-yc-GfM" firstAttribute="width" secondItem="KtV-pW-V2q" secondAttribute="width" id="JdK-g5-yEV"/>
+                                    <constraint firstItem="cSr-yc-GfM" firstAttribute="trailing" secondItem="VfT-p2-9W1" secondAttribute="trailing" id="cbV-uR-TZD"/>
+                                    <constraint firstItem="VfT-p2-9W1" firstAttribute="top" secondItem="cSr-yc-GfM" secondAttribute="top" id="eu4-ft-0hc"/>
+                                    <constraint firstItem="cSr-yc-GfM" firstAttribute="leading" secondItem="VfT-p2-9W1" secondAttribute="leading" id="kGo-jz-wqv"/>
+                                    <constraint firstItem="cSr-yc-GfM" firstAttribute="bottom" secondItem="VfT-p2-9W1" secondAttribute="bottom" id="m4p-TI-yBR"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VfT-p2-9W1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="KtV-pW-V2q"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="11z-Ds-82Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="6X9-Z4-A5K"/>
+                            <constraint firstItem="11z-Ds-82Y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="p22-EU-zOS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="11z-Ds-82Y" secondAttribute="trailing" id="uFp-7z-c4j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="11z-Ds-82Y" secondAttribute="bottom" id="v9A-Y0-ugt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameDescribtionValueLabel" destination="11T-iy-Kk7" id="tnL-hP-PAR"/>
+                        <outlet property="gameImageView" destination="5zL-Wo-76z" id="3yd-Rl-uF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="game_placeholder" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

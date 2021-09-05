@@ -9,4 +9,5 @@ import Foundation
 
 enum ViewController: String{
     case GameListViewController
+    case GameDetailsViewController
 }

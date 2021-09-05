@@ -21,6 +21,8 @@ class GameListViewController: UIViewController {
     
     private func setup(){
         setupTable()
+        self.title = "Games"
+        gamesSearchBar.delegate = self
         presenter?.onScreenAppeared()
     }
     
@@ -73,4 +75,10 @@ extension GameListViewController:GameListViewProtocol{
         self.gamesTableView.reloadData()
     }
     
+}
+
+extension GameListViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.onSearchRequested(query: searchText)
+    }
 }
