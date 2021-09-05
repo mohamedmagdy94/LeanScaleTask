@@ -9,6 +9,6 @@ import Foundation
 
 struct Page<T>{
     var data: [T]
-    let isRemote: Bool
-    let hasMore: Bool
+    var isRemote: Bool
+    var hasMore: Bool
 }

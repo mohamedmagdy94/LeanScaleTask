@@ -19,10 +19,12 @@ class GameTableViewCell: UITableViewCell {
     
     func config(with viewModel: GameListCellViewModel){
         self.backgroundColor = viewModel.color
+        self.imageView?.image = #imageLiteral(resourceName: "game_placeholder")
         gameThumbImage.loadImageUsingCache(withUrl: viewModel.imageURL)
         gameNameLabel.text = viewModel.title
         metaCriticScoreLabel.text = viewModel.metacritic
         categoriesLabel.text = viewModel.categories
+        self.selectionStyle = .none
     }
     
 }

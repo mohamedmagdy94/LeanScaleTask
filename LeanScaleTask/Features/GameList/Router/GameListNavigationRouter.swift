@@ -9,9 +9,11 @@ import Foundation
 import UIKit.UIViewController
 
 class GameListNavigationRouter: GameListNavigationRouterProtocol {
-    static func createModule()->UIViewController{
-        guard let gameListView = UIViewController.create(storyboardName: Storyboard.GameList.rawValue, viewControllerID: ViewController.GameListViewController.rawValue) else{ return UIViewController() }
-        return gameListView
+    static func createModule(isMocking: Bool)->UIViewController{
+        guard let gameListView = UIViewController.create(storyboardName: Storyboard.GameList.rawValue, viewControllerID: ViewController.GameListViewController.rawValue) as? GameListViewController else{ return UIViewController() }
+        let configurator = GameListConfigurator(view: gameListView,isMocking: isMocking)
+        let configuredView = configurator.configModule()
+        return configuredView
     }
     
     var screen: UIViewController

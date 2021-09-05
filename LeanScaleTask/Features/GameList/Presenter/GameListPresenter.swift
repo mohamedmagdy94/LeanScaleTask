@@ -14,6 +14,7 @@ class GameListPresenter: GameListPresenterProtocol{
     var view: GameListViewProtocol?
     var cells: [GameListCellViewModel]
     var cellsCount: Int
+    var isLoading = false
     private var pageSize: Int
     private var pageNumber: Int
     private var searchQuery: String?
@@ -33,14 +34,16 @@ class GameListPresenter: GameListPresenterProtocol{
     }
     
     func onScreenAppeared() {
-        interactor?.getGames(pageNumber: 1)
+        interactor?.getGames(pageNumber: pageNumber)
     }
     
     func getNextPage() {
+        if isLoading{ return }
         guard let page = page else{ return }
         if page.hasMore{
             pageNumber += 1
             view?.showLoading()
+            isLoading = true
             guard let query = searchQuery else{
                 interactor?.getGames(pageNumber: pageNumber)
                 return
@@ -53,12 +56,16 @@ class GameListPresenter: GameListPresenterProtocol{
     
     func onSearchRequested(query: String) {
         if query == ""{
+            self.view?.showLoading()
+            isLoading = true
             pageNumber = 1
             cells = []
             searchQuery = nil
             page = nil
             interactor?.getGames(pageNumber: pageNumber)
         }else if query.count > 3{
+            self.view?.showLoading()
+            isLoading = true
             pageNumber = 1
             searchQuery = query
             page = nil
@@ -72,9 +79,12 @@ class GameListPresenter: GameListPresenterProtocol{
         interactor?.onGameOpened(game: selectedGame)
         cells[index].color = .lightGray
         router?.showGameDetails(with: selectedGame)
+        view?.reloadList()
     }
     
     func onGamesFetched(result: Result<Page<Game>, GameListError>) {
+        self.view?.hideLoading()
+        isLoading = false
         switch result {
         case .success(let result):
             handleFetchGamesSuccess(with: result)
@@ -84,16 +94,26 @@ class GameListPresenter: GameListPresenterProtocol{
     }
     
     private func handleFetchGamesSuccess(with result: Page<Game>){
+        view?.hideLoading()
+        isLoading = false
         guard let page = page else{
             self.page = result
-            cells = result.data.map{[weak self] in GameListCellViewModel(imageURL: $0.backgroundImage ?? "", title: $0.name ?? "", metacritic: "\($0.metacritic ?? 0)" , categories: "\(self?.convertGameCategoriesToString(with: $0.tags) ?? "")", color: $0.isOpened ?? false ? .lightGray : .white) }
+            cells = result.data.map{[weak self] in GameListCellViewModel(imageURL: $0.background_image ?? "", title: $0.name ?? "", metacritic: "\($0.metacritic ?? 0)" , categories: "\(self?.convertGameCategoriesToString(with: $0.tags) ?? "")", color: $0.isOpened ?? false ? .lightGray : .white) }
+            cellsCount = result.data.count
             view?.reloadList()
             return
         }
         var fetchedGames = result
-        let lastItemIndex = page.data.count
-        fetchedGames.data = page.data + fetchedGames.data
-        view?.focusOnItem(with: lastItemIndex)
+        var lastItemIndex = page.data.count - 1
+        if page.isRemote{
+            fetchedGames.data = page.data + fetchedGames.data
+        }
+        self.page?.data = fetchedGames.data
+        cellsCount = page.data.count
+        cells = page.data.map{[weak self] in GameListCellViewModel(imageURL: $0.background_image ?? "", title: $0.name ?? "", metacritic: "\($0.metacritic ?? 0)" , categories: "\(self?.convertGameCategoriesToString(with: $0.tags) ?? "")", color: $0.isOpened ?? false ? .lightGray : .white) }
+        view?.reloadList()
+        self.page?.isRemote = result.isRemote
+        self.page?.hasMore  = result.hasMore
     }
     
     private func convertGameCategoriesToString(with tags: [Tag]?)->String{
@@ -115,6 +135,13 @@ class GameListPresenter: GameListPresenterProtocol{
         guard let page = page else{ return }
         guard let gameIndex = (page.data.firstIndex{ $0.id == game.id }) else { return }
         self.page?.data[gameIndex] = game
+    }
+    
+    func willDisplayLastItem() {
+        guard let page = page else{ return }
+        if page.hasMore && !isLoading{
+            self.getNextPage()
+        }
     }
     
 }

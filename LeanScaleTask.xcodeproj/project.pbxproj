@@ -80,6 +80,8 @@
 		D9BF39A426E4DA69006ABCFE /* GameMockReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A226E4DA69006ABCFE /* GameMockReprository.swift */; };
 		D9BF39A626E4DBB0006ABCFE /* OpenedGameMockReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A526E4DBB0006ABCFE /* OpenedGameMockReprository.swift */; };
 		D9BF39A726E4DBB0006ABCFE /* OpenedGameMockReprository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A526E4DBB0006ABCFE /* OpenedGameMockReprository.swift */; };
+		D9BF39A926E4E84E006ABCFE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */; };
+		D9BF39AA26E4E84E006ABCFE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,7 @@
 		D9BF399F26E4DA51006ABCFE /* GameListMockResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameListMockResponse.json; sourceTree = "<group>"; };
 		D9BF39A226E4DA69006ABCFE /* GameMockReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMockReprository.swift; sourceTree = "<group>"; };
 		D9BF39A526E4DBB0006ABCFE /* OpenedGameMockReprository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedGameMockReprository.swift; sourceTree = "<group>"; };
+		D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +372,7 @@
 				D944CEF326E40E2F002D3CD5 /* UIImageView+Extension.swift */,
 				D944CF0126E4115E002D3CD5 /* UIViewController+Extension.swift */,
 				D944CF1E26E41D89002D3CD5 /* Codable+Extension.swift */,
+				D9BF39A826E4E84E006ABCFE /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -646,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BF39A926E4E84E006ABCFE /* UIView+Extension.swift in Sources */,
 				D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */,
 				D944CF2E26E42707002D3CD5 /* GameListLocalReprository.swift in Sources */,
 				D944CF3726E42AAD002D3CD5 /* Page.swift in Sources */,
@@ -719,6 +724,7 @@
 				D944CF2726E42316002D3CD5 /* NetworkRoutering.swift in Sources */,
 				D9BF399326E4D14A006ABCFE /* GameListPresenter.swift in Sources */,
 				D944CF1626E41B76002D3CD5 /* GameListNetworkRouter.swift in Sources */,
+				D9BF39AA26E4E84E006ABCFE /* UIView+Extension.swift in Sources */,
 				D944CF1726E41B79002D3CD5 /* GameListResponse.swift in Sources */,
 				D944CF1A26E41B85002D3CD5 /* GameListRequest.swift in Sources */,
 				D944CF0026E41122002D3CD5 /* ViewController.swift in Sources */,

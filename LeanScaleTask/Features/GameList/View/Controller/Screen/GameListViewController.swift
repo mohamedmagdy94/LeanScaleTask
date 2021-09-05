@@ -44,40 +44,33 @@ extension GameListViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
-        UIView.animate(withDuration: 0.4) {
-            cell.alpha = 1
-            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.height < 0 {
+            presenter?.willDisplayLastItem()
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.onGameSelected(index: indexPath.item)
     }
+    
 }
 
 extension GameListViewController:GameListViewProtocol{
     func showLoading() {
-        
+        self.view.showLoading()
     }
     
     func hideLoading() {
-        
+        self.view.hideLoading()
     }
     
     func showError(message: String) {
-        
+        self.view.showError(message: message)
     }
     
     func reloadList() {
-        
+        self.gamesTableView.reloadData()
     }
-    
-    func focusOnItem(with index: Int) {
-        
-    }
-    
     
 }

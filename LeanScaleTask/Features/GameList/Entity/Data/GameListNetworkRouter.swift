@@ -27,7 +27,7 @@ enum GameListNetworkRouter: NetworkRoutering {
     private var path: String {
         switch self {
         case .getGames:
-            return "/games"
+            return "games"
         }
     }
     
@@ -36,7 +36,7 @@ enum GameListNetworkRouter: NetworkRoutering {
     }
     
     func request() throws -> URLRequest {
-        let urlString = "\(APIConfig.BASE_URL)\(path)"
+        let urlString = "\(APIConfig.BASE_URL.rawValue)\(path)"
         
         var url: URL?
         
@@ -64,7 +64,7 @@ enum GameListNetworkRouter: NetworkRoutering {
     private func buildURLFromQueryItems()->URL?{
         switch self {
         case .getGames(let request):
-            let urlString = "\(APIConfig.BASE_URL)\(path)"
+            let urlString = "\(APIConfig.BASE_URL.rawValue)\(path)"
             var urlComponents = URLComponents(string: urlString)
             guard let items = request.dictionary else{ return urlComponents?.url }
             let queryItems = items.map{ URLQueryItem(name: $0.key, value: "\($0.value)") }

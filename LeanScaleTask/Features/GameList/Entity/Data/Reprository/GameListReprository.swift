@@ -24,11 +24,11 @@ class GameListReprository: GameListReprositoryProtocol{
     func fetchAll(with request: GameListRequest,onFetch: @escaping (Result<Page<Game>,HTTPHelper.NetworkError>)->Void){
         
         let isFirstPage = request.page == 1
-        let isNotSearch = request.search != nil
+        let isNotSearch = request.search == nil
         
         if isFirstPage && isNotSearch{
             if let cachedGames = gameListLocalReprository.fetchAll(){
-                let cachedPage = Page(data: cachedGames, isRemote: false, hasMore: true)
+                let cachedPage = Page(data: cachedGames, isRemote: false, hasMore: false)
                 onFetch(.success(cachedPage))
             }
         }

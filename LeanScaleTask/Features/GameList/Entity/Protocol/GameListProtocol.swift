@@ -13,7 +13,7 @@ protocol GameListPresenterInputProtocol{
     var cells: [GameListCellViewModel]{get}
     func onSearchRequested(query: String)
     func onGameSelected(index: Int)
-    func getNextPage()
+    func willDisplayLastItem()
 }
 
 protocol GameListPresenterOutputProtocol{
@@ -38,5 +38,4 @@ protocol GameListViewProtocol {
     func hideLoading()
     func showError(message: String)
     func reloadList()
-    func focusOnItem(with index: Int)
 }

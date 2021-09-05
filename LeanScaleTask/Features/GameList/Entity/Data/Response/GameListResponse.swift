@@ -21,7 +21,7 @@ struct Game : Codable {
     let stores: [Store]?
     let released: String?
     let tba: Bool?
-    let backgroundImage: String?
+    let background_image: String?
     let rating: Double?
     let ratingTop: Int?
     let ratings: [Rating]?

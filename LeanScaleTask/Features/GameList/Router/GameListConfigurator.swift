@@ -18,8 +18,8 @@ struct GameListConfigurator {
     }
     
     func configModule() -> GameListViewController {
-        let gameReprository: GameListReprositoryProtocol = isMocking ? GameListReprository() : GameMockReprository()
-        let openedGameReprository: OpenedGameReprositoryProtocol = isMocking ? OpenedGameReprository() : OpenedGameMockReprository()
+        let gameReprository: GameListReprositoryProtocol = isMocking ? GameMockReprository() : GameListReprository()
+        let openedGameReprository: OpenedGameReprositoryProtocol = isMocking ? OpenedGameMockReprository() : OpenedGameReprository()
         let interactor = GameListInteractor(gameReprository: gameReprository, openedGameReprository: openedGameReprository, presenter: nil)
         let router = GameListNavigationRouter(screen: view)
         let presenter = GameListPresenter(interactor: interactor, view: view, router: router)
