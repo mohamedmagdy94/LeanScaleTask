@@ -14,6 +14,7 @@ protocol GameDetailsPresenterInputProtocol{
     func onFavouriteItemRequest()
     func openWebsite()
     func openReddit()
+    func toggleRead()
 }
 
 protocol GameDetailsPresenterOutputProtocol{
@@ -33,4 +34,5 @@ protocol GameDetailsViewProtocol {
     func showError(message: String)
     func reloadData(viewModel: GameDetailsViewModel)
     func openURL(url: String)
+    func toggleDescription()
 }

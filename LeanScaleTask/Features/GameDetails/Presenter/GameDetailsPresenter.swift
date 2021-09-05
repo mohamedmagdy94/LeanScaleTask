@@ -27,6 +27,12 @@ class GameDetailsPresenter: GameDetailsPresenterProtocol{
         view?.showLoading()
     }
     
+    func toggleRead() {
+        isDescribtionExpanded = !isDescribtionExpanded
+        describtionLinesNumber = isDescribtionExpanded ? 0 : 3
+        view?.toggleDescription()
+    }
+    
     func onFavouriteItemRequest() {
         interactor?.makeItemFavourite()
     }
@@ -42,6 +48,7 @@ class GameDetailsPresenter: GameDetailsPresenterProtocol{
     }
     
     func onGameDetailsFetched(result: Result<GameDetailsResponse, GameListError>) {
+        view?.hideLoading()
         switch result {
         case .success(let response):
             self.gameDetailsResponse = response

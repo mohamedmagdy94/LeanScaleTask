@@ -168,6 +168,7 @@
                         <outlet property="gameDescribtionValueLabel" destination="11T-iy-Kk7" id="tnL-hP-PAR"/>
                         <outlet property="gameImageView" destination="5zL-Wo-76z" id="3yd-Rl-uF7"/>
                         <outlet property="gameNameLabel" destination="Ugo-Pf-T8G" id="wZS-Dt-2ha"/>
+                        <outlet property="toggleReadButton" destination="vdO-md-wmN" id="gzj-6s-h0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

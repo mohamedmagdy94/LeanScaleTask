@@ -15,5 +15,11 @@ extension UIViewController {
         let destinationVC = targetStoryboard.instantiateViewController(withIdentifier: viewControllerID)
         return destinationVC
     }
+    
+    func openURLInSafari(urlString: String){
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
+    }
 }
 

@@ -11,7 +11,7 @@ protocol GameReprositoryProtocol {
     func fetch(with request: GameDetailsRequest,onFetch: @escaping (Result<GameDetailsResponse,HTTPHelper.NetworkError>)->Void)
 }
 
-class GameReprository{
+class GameReprository: GameReprositoryProtocol{
  
     func fetch(with request: GameDetailsRequest,onFetch: @escaping (Result<GameDetailsResponse,HTTPHelper.NetworkError>)->Void){
         let request = GameDetailsNetworkRouter.getGameDetails(request: request)

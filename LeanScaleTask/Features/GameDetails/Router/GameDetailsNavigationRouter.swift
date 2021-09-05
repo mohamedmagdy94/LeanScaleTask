@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 
 class GameDetailsNavigationRouter {
-    static func createModule(isMocking: Bool)->UIViewController{
+    static func createModule(isMocking: Bool,game: Game)->UIViewController{
         guard let gameDetailsView = UIViewController.create(storyboardName: Storyboard.GameDetails.rawValue, viewControllerID: ViewController.GameDetailsViewController.rawValue) as? GameDetailsViewController else{ return UIViewController() }
-        return gameDetailsView
+        let configurator = GameDetailsConfigurator(game: game, view: gameDetailsView)
+        let configuredView = configurator.configModule()
+        return configuredView
     }
     
     var screen: UIViewController
