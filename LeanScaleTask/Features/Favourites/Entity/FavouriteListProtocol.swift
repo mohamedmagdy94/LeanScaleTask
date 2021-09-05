@@ -12,6 +12,7 @@ protocol FavouriteListPresenterInputProtocol{
     func onGameSelected(index: Int)
     func onUnfavouriteGame(index: Int)
     func onDeleteConfirmed()
+    func onDeleteCanceled()
     var cellsCount: Int{ get }
     var cells: [GameListCellViewModel]{get}
 }

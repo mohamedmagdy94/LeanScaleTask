@@ -10,6 +10,7 @@ import Foundation
 protocol FavouriteGameReprositoryProtcol {
     func save(game: Game)
     func getAll()->[Game]
+    func delete(game: Game)
 }
 
 class FavouriteGameReprository: FavouriteGameReprositoryProtcol{
@@ -35,6 +36,18 @@ class FavouriteGameReprository: FavouriteGameReprositoryProtcol{
         guard let favouriteGamesDecoded = try? jsonDecoder.decode([Game].self, from: favouriteGamesEncoded) else{ return favouriteGames }
         favouriteGames = favouriteGamesDecoded
         return favouriteGames
-        
     }
+    
+    func delete(game: Game) {
+        var favouriteGames = [Game]()
+        if let favouriteGamesEncoded = userDefaultsService.data(forKey: LocalStorageKey.FAVOURITE_GAMES.rawValue){
+            if let favouriteGamesDecoded = try? jsonDecoder.decode([Game].self, from: favouriteGamesEncoded){
+                favouriteGames = favouriteGamesDecoded
+            }
+        }
+        favouriteGames = favouriteGames.filter{ $0.id == game.id } 
+        guard let favouriteGamesDecoded = try? jsonEncoder.encode(favouriteGames) else{ return }
+        userDefaultsService.setValue(favouriteGamesDecoded, forKey: LocalStorageKey.FAVOURITE_GAMES.rawValue)
+    }
+    
 }

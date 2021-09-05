@@ -93,6 +93,8 @@
 		D98DAE6226E570B600FED1D3 /* FavouriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */; };
 		D98DAE6526E5717C00FED1D3 /* FavouriteListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6426E5717C00FED1D3 /* FavouriteListProtocol.swift */; };
 		D98DAE6626E5717C00FED1D3 /* FavouriteListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6426E5717C00FED1D3 /* FavouriteListProtocol.swift */; };
+		D98DAE6926E57C9100FED1D3 /* FavouriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */; };
+		D98DAE6A26E57C9100FED1D3 /* FavouriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */; };
 		D9BF398C26E4BAC9006ABCFE /* GameListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */; };
 		D9BF399026E4BBC4006ABCFE /* GameListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */; };
 		D9BF399226E4C183006ABCFE /* GameListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF399126E4C183006ABCFE /* GameListError.swift */; };
@@ -188,6 +190,7 @@
 		D98DAE5B26E5708900FED1D3 /* FavouriteList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavouriteList.storyboard; sourceTree = "<group>"; };
 		D98DAE6026E570B600FED1D3 /* FavouriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListViewController.swift; sourceTree = "<group>"; };
 		D98DAE6426E5717C00FED1D3 /* FavouriteListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListProtocol.swift; sourceTree = "<group>"; };
+		D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListPresenter.swift; sourceTree = "<group>"; };
 		D9BF398B26E4BAC9006ABCFE /* GameListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListPresenter.swift; sourceTree = "<group>"; };
 		D9BF398F26E4BBC4006ABCFE /* GameListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListProtocol.swift; sourceTree = "<group>"; };
 		D9BF399126E4C183006ABCFE /* GameListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListError.swift; sourceTree = "<group>"; };
@@ -581,6 +584,7 @@
 		D98DAE5626E5704D00FED1D3 /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				D98DAE6726E57C2900FED1D3 /* Presenter */,
 				D98DAE6326E5716900FED1D3 /* Entity */,
 				D98DAE5726E5705300FED1D3 /* View */,
 			);
@@ -618,6 +622,14 @@
 				D98DAE6426E5717C00FED1D3 /* FavouriteListProtocol.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D98DAE6726E57C2900FED1D3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D98DAE6826E57C9100FED1D3 /* FavouriteListPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D9BF398A26E4BABC006ABCFE /* Presenter */ = {
@@ -857,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98DAE6926E57C9100FED1D3 /* FavouriteListPresenter.swift in Sources */,
 				D9BF39A926E4E84E006ABCFE /* UIView+Extension.swift in Sources */,
 				D944CF2326E422BB002D3CD5 /* NetworkManager.swift in Sources */,
 				D98DAE3326E55E2500FED1D3 /* GameDetailsProtocol.swift in Sources */,
@@ -940,6 +953,7 @@
 				D98DAE3026E55A1200FED1D3 /* GameDetailsNavigationRouter.swift in Sources */,
 				D9BF39A426E4DA69006ABCFE /* GameMockReprository.swift in Sources */,
 				D98DAE5226E566FD00FED1D3 /* FavouriteGameReprository.swift in Sources */,
+				D98DAE6A26E57C9100FED1D3 /* FavouriteListPresenter.swift in Sources */,
 				D944CF3226E4284F002D3CD5 /* LocalStorageKey.swift in Sources */,
 				D944CF1D26E41BE5002D3CD5 /* HTTPHelpers.swift in Sources */,
 				D944CEF826E410A5002D3CD5 /* GameListNavigationRouter.swift in Sources */,
